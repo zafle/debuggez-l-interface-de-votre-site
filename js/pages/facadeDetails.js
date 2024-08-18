@@ -72,7 +72,7 @@ const handleSensorImagesGallery = sensorData => {
 const main = async () => {
     const sensorData = await retrieveSensorData()
 
-    const weatherForecastData = await retrieveWeatherForecastData(sensorData.coordinates, false)
+    const weatherForecastData = await retrieveWeatherForecastData(sensorData.coordinates, true)
 
     fillSensorTable(sensorData)
     handleSensorImagesGallery(sensorData)
