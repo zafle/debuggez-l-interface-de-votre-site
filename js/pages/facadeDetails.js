@@ -56,7 +56,7 @@ const fillWeatherForecastTable = weatherForecastData => {
     `
 
     $weatherCloudcover.textContent = weatherForecastData.current.cloudcover
-    
+
     $weatherUVIndex.textContent = weatherForecastData.current.uv_index
     $weatherIsDay.textContent = weatherForecastData.current.is_day === 'yes' ? 'Jour' : 'Nuit'
 
