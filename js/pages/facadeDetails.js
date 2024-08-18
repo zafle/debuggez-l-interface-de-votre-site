@@ -56,7 +56,7 @@ const fillWeatherForecastTable = weatherForecastData => {
     `
 
     $weatherCloudcover.textContent = weatherForecastData.current.cloudcover
-    
+
     $weatherUVIndex.textContent = weatherForecastData.current.uv_index
     $weatherIsDay.textContent = weatherForecastData.current.is_day === 'yes' ? 'Jour' : 'Nuit'
 
@@ -72,7 +72,7 @@ const handleSensorImagesGallery = sensorData => {
 const main = async () => {
     const sensorData = await retrieveSensorData()
 
-    const weatherForecastData = await retrieveWeatherForecastData(sensorData.coordinates, true)
+    const weatherForecastData = await retrieveWeatherForecastData(sensorData.coordinates, false)
 
     fillSensorTable(sensorData)
     handleSensorImagesGallery(sensorData)
