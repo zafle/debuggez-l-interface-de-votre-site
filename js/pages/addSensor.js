@@ -12,10 +12,12 @@ const handleGeolocation = () => {
         }
     }
 
-    const onError = error => {}
+    const onError = error => {
+        console.log("la geolocalisation ne se fait pas" + error.message)
+    }
 
     if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(onError, onSuccess)
+        navigator.geolocation.getCurrentPosition(onSuccess, onError)
     }
 }
 
@@ -24,7 +26,7 @@ const main = () => {
 
     $addSensorForm.addEventListener('submit', e => {
         e.preventDefault()
-        
+
         console.log("===")
     })
 }
